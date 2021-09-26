@@ -146,6 +146,7 @@ class Modula_Photoblocks_Migrator {
 	public function photoblocks_gallery_import( $gallery_id = '' ) {
 
 		global $wpdb;
+
 		$modula_importer = Modula_Importer::get_instance();
 
 		// Set max execution time so we don't timeout
@@ -330,6 +331,7 @@ class Modula_Photoblocks_Migrator {
 	 * @since 1.0.0
 	 */
 	public function modula_import_result( $success, $message, $modula_gallery_id = false ) {
+
 		echo json_encode( array(
 			'success'           => (bool) $success,
 			'message'           => (string) $message,
@@ -346,7 +348,9 @@ class Modula_Photoblocks_Migrator {
 	 * @since 1.0.0
 	 */
 	public function clean_entries( $gallery_id ) {
+
 		global $wpdb;
+
 		$sql = $wpdb->prepare( "DELETE FROM  " . $wpdb->prefix . "photoblocks WHERE id = $gallery_id" );
 		$wpdb->query( $sql );
 	}
@@ -424,6 +428,8 @@ class Modula_Photoblocks_Migrator {
 	 * @param $data
 	 *
 	 * @return mixed
+	 *
+	 * @since 1.0.0
 	 */
 	public function migrator_images( $images, $data ) {
 
