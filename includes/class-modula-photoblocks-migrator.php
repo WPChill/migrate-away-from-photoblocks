@@ -229,7 +229,7 @@ class Modula_Photoblocks_Migrator {
 					'width'       => absint( $image['width'] ),
 					'height'      => absint( $image['height'] ),
 					'filters'     => ''
-				), $image, $gallery_data );
+				), $image, $gallery_data, 'photoblocks' );
 			}
 		}
 
