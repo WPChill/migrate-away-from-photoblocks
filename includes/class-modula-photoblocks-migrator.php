@@ -160,7 +160,7 @@ class Modula_Photoblocks_Migrator {
 			check_ajax_referer( 'modula-importer', 'nonce' );
 
 			if ( ! isset( $_POST['id'] ) ) {
-				$this->modula_import_result( false, esc_html__( 'No gallery was selected', 'migrate-away-from-photoblocks' ), false );
+				$this->modula_import_result( false, esc_html__( 'No gallery was selected', 'modula-photoblocks-migrator' ), false );
 			}
 
 			$gallery_id = absint( $_POST['id'] );
@@ -178,7 +178,7 @@ class Modula_Photoblocks_Migrator {
 				if ( isset( $_POST['clean'] ) && 'delete' == $_POST['clean'] ) {
 					$this->clean_entries( $gallery_id );
 				}
-				$this->modula_import_result( false, esc_html__( 'Gallery already migrated!', 'migrate-away-from-photoblocks' ), false );
+				$this->modula_import_result( false, esc_html__( 'Gallery already migrated!', 'modula-photoblocks-migrator' ), false );
 			}
 		}
 
@@ -238,7 +238,7 @@ class Modula_Photoblocks_Migrator {
 			if ( isset( $_POST['clean'] ) && 'delete' == $_POST['clean'] ) {
 				$this->clean_entries( $gallery_id );
 			}
-			$this->modula_import_result( false, esc_html__( 'No images found in gallery. Skipping gallery...', 'migrate-away-from-photoblocks' ), false );
+			$this->modula_import_result( false, esc_html__( 'No images found in gallery. Skipping gallery...', 'modula-photoblocks-migrator' ), false );
 		}
 
 		// Get Modula Gallery defaults, used to set modula-settings metadata
