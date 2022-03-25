@@ -272,7 +272,7 @@ class Modula_Photoblocks_Migrator {
 			$ftg_shortcode, $modula_shortcode );
 		$wpdb->query( $sql );
 
-		if ( $_POST['clean'] && 'delete' == $_POST['clean'] ) {
+		if ( isset( $_POST['clean'] ) && 'delete' == sanitize_text_field( wp_unslash( $_POST['clean'] ) ) ) {
 			$this->clean_entries( $gallery_id );
 		}
 
@@ -289,7 +289,11 @@ class Modula_Photoblocks_Migrator {
 
 		check_ajax_referer( 'modula-importer', 'nonce' );
 
-		$galleries         = $_POST['galleries'];
+		if ( ! isset( $_POST['galleries'] ) ) {
+			wp_send_json_error();
+		}
+		$galleries = array_map( 'absint', wp_unslash( $_POST['galleries'] ) );
+
 		$importer_settings = get_option( 'modula_importer' );
 
 		if ( ! is_array( $importer_settings ) ) {
@@ -311,12 +315,12 @@ class Modula_Photoblocks_Migrator {
 		// Set url for migration complete
 		$url = admin_url( 'edit.php?post_type=modula-gallery&page=modula&modula-tab=importer&migration=complete' );
 
-		if ( $_POST['clean'] && 'delete' == $_POST['clean'] ) {
+		if ( isset( $_POST['clean'] ) && 'delete' ==  sanitize_text_field( wp_unslash( $_POST['clean'] ) ) {
 			// Set url for migration and cleaning complete
 			$url = admin_url( 'edit.php?post_type=modula-gallery&page=modula&modula-tab=importer&migration=complete&delete=complete' );
 		}
 
-		echo $url;
+		echo esc_url( $url );
 		wp_die();
 	}
 

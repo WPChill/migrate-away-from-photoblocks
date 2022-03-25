@@ -88,7 +88,7 @@ Our full privacy policy can be found [here](https://wp-modula.com/privacy-policy
 
 = For automatic installation: =
 
-The simplest way to install is to click on \'Plugins\' then \'Add\' and type \'Migrate away from Final Tiles\' in the search field.
+The simplest way to install is to click on \'Plugins\' then \'Add\' and type \'Migrate away from Photoblocks\' in the search field.
 
 = For manual installation 1: =
 
@@ -103,7 +103,7 @@ The simplest way to install is to click on \'Plugins\' then \'Add\' and type \'M
 2. Copy the plugin zip file (modula-photoblocks-migrator.x.x.x.zip) up to your server and unzip it somewhere on the file system.
 3. Copy the \"modula-photoblocks-migrator\" folder into the /wp-content/plugins directory of your WordPress installation.
 4. Login to your website and go to the Plugins section of your admin panel.
-5. Look for \"Migrate away from Final Tiles\" and click Activate.
+5. Look for \"Migrate away from Photoblocks\" and click Activate.
 
 == Changelog ==
 
