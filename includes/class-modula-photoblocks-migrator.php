@@ -315,7 +315,7 @@ class Modula_Photoblocks_Migrator {
 		// Set url for migration complete
 		$url = admin_url( 'edit.php?post_type=modula-gallery&page=modula&modula-tab=importer&migration=complete' );
 
-		if ( isset( $_POST['clean'] ) && 'delete' ==  sanitize_text_field( wp_unslash( $_POST['clean'] ) ) {
+		if ( isset( $_POST['clean'] ) && 'delete' ==  sanitize_text_field( wp_unslash( $_POST['clean'] ) ) ) {
 			// Set url for migration and cleaning complete
 			$url = admin_url( 'edit.php?post_type=modula-gallery&page=modula&modula-tab=importer&migration=complete&delete=complete' );
 		}
