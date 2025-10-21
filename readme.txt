@@ -105,6 +105,11 @@ The simplest way to install is to click on \'Plugins\' then \'Add\' and type \'M
 4. Login to your website and go to the Plugins section of your admin panel.
 5. Look for \"Migrate away from Photoblocks\" and click Activate.
 
+== Frequently Asked Questions ==
+= Where do I report security bugs found in this plugin? =
+
+Please report security bugs found in the source code of the Migrate away from Photoblocks Gallery plugin through the [Patchstack Vulnerability Disclosure  Program](https://patchstack.com/database/vdp/ef6cc857-d8eb-4033-8c9d-0a04b4c00e6b). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin."
+
 == Changelog ==
 
 See <a href="https://github.com/WPChill/modula-photoblocks-migrator/blob/main/changelog.txt" target="_blank">changelog</a>
